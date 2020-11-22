@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hi, I develop web apps!👨‍💻 <br />
+          Hi, I develop web apps!💻🥤 <br />
           <span className={utilStyles.headingSm}>
             Web Dev Head @ Google DSC-BPIT
           </span>
