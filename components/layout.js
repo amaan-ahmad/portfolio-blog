@@ -36,8 +36,8 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            <p>Full Stack Web Developer</p>
-            <p>{social()}</p>
+            <p style={{ margin: "0.5em 0" }}>Full Stack Web Developer</p>
+            {social()}
             {navbar()}
           </>
         ) : (

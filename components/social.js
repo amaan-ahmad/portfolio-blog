@@ -4,12 +4,32 @@ import {
   faLinkedinIn,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import socialStyles from "./social.module.css";
+
+const openLink = (link) => {
+  window.location.href = link;
+};
+
 export default function social() {
   return (
     <>
-      <FontAwesomeIcon icon={faTwitter} size={12} />
-      <FontAwesomeIcon icon={faLinkedinIn} />
-      <FontAwesomeIcon icon={faGithub} />
+      <div className={socialStyles.iconFlex}>
+        <FontAwesomeIcon
+          icon={faTwitter}
+          className={socialStyles.svg}
+          onClick={() => openLink("https://www.twitter.com/amaancodes")}
+        />
+        <FontAwesomeIcon
+          icon={faLinkedinIn}
+          className={socialStyles.svg}
+          onClick={() => openLink("https://www.linkedin.com/in/amaan05")}
+        />
+        <FontAwesomeIcon
+          icon={faGithub}
+          className={socialStyles.svg}
+          onClick={() => openLink("https://www.github.com/amaan-ahmad")}
+        />
+      </div>
     </>
   );
 }
