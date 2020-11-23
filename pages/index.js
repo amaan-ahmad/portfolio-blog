@@ -25,18 +25,20 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>
           Hi, I develop web apps!💻🥤 <br />
-          <span className={utilStyles.headingSm}>
+          <span
+            className={utilStyles.headingSm}
+            style={{ fontStyle: "italic", fontWeight: "200" }}
+          >
             Web Dev Head @ Google DSC-BPIT
           </span>
         </p>
-        <p>
+        {/* <p>
           Connect with me on: <a href={twitterHandle}>Twitter</a>,{" "}
           <a href={email}>E-mail 📧</a>
           <br />
           Software Engineer in making ⏳
-        </p>
+        </p> */}
       </section>
-      <hr />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
