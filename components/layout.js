@@ -34,7 +34,9 @@ export default function Layout({ children, home }) {
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={`${utilStyles.heading2Xl} ${utilStyles.txtCenter}`}>
+              {name}
+            </h1>
             <p style={{ margin: "0.5em 0" }}>Full Stack Web Developer</p>
             {social()}
             {navbar()}
@@ -48,7 +50,7 @@ export default function Layout({ children, home }) {
                 alt={name}
               />
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className={`${utilStyles.headingLg} ${utilStyles.txtCenter}`}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
@@ -59,11 +61,14 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
+        <>
+          <div className={styles.backToHome}>
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </div>
+          {social()}
+        </>
       )}
     </div>
   );

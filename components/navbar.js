@@ -9,13 +9,13 @@ export default function navbar() {
           <Link href="/">Home</Link>
         </div>
         <div className={layout.navItems}>
-          <Link href="/">Projects</Link>
+          <Link href="//blog.amaan.codes">Blog</Link>
         </div>
         <div className={layout.navItems}>
-          <Link href="/">About</Link>
+          <Link href="/about">About</Link>
         </div>
         <div className={layout.navItems}>
-          <Link href="/">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </div>
       </nav>
     </>

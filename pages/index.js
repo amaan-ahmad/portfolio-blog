@@ -14,9 +14,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const twitterHandle = `https://twitter.com/amaancodes`;
-  // const instaHandle = `https://instagram.com/amaan.codes`;
-  const email = `mailto:amaan_ahmad_@outlook.com`;
   return (
     <Layout home>
       <Head>
@@ -29,30 +26,25 @@ export default function Home({ allPostsData }) {
             className={utilStyles.headingSm}
             style={{ fontStyle: "italic", fontWeight: "200" }}
           >
-            Web Dev Head @ Google DSC-BPIT
+            Web Dev Head @ Google DSC-BPIT <br /> Jr. Council Web-Dev @
+            IOSD-BPIT
           </span>
         </p>
-        {/* <p>
-          Connect with me on: <a href={twitterHandle}>Twitter</a>,{" "}
-          <a href={email}>E-mail 📧</a>
-          <br />
-          Software Engineer in making ⏳
-        </p> */}
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Featured Projects ⭐</h2>
         <ul className={utilStyles.list}>
           {console.log(allPostsData)}
-          {allPostsData.map(({ id, date, title }) =>
+          {allPostsData.map(({ id, date, title, thumbnail }) =>
             id == "[id].js" ? null : (
               <li className={utilStyles.listItem} key={id}>
-                <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
-                </Link>
+                <div className={utilStyles.post}>
+                  <img src={thumbnail} />
+                  <Link href={`/posts/${id}`}>
+                    <a>{title}</a>
+                  </Link>
+                </div>
                 <br />
-                <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
-                </small>
               </li>
             )
           )}

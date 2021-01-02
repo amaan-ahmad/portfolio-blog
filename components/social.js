@@ -4,6 +4,7 @@ import {
   faLinkedinIn,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import socialStyles from "./social.module.css";
 import Link from "next/link";
 
@@ -23,6 +24,10 @@ const socialData = [
   {
     icon: faGithub,
     link: "https://www.github.com/amaan-ahmad",
+  },
+  {
+    icon: faEnvelope,
+    link: "mailto:amaan_ahmad_@outlook.com",
   },
 ];
 
