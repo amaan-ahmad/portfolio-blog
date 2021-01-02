@@ -5,30 +5,38 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import socialStyles from "./social.module.css";
+import Link from "next/link";
 
 const openLink = (link) => {
   window.location.href = link;
 };
 
+const socialData = [
+  {
+    icon: faTwitter,
+    link: "https://www.twitter.com/amaancodes",
+  },
+  {
+    icon: faLinkedinIn,
+    link: "https://www.linkedin.com/in/amaan05",
+  },
+  {
+    icon: faGithub,
+    link: "https://www.github.com/amaan-ahmad",
+  },
+];
+
 export default function social() {
   return (
     <>
       <div className={socialStyles.iconFlex}>
-        <FontAwesomeIcon
-          icon={faTwitter}
-          className={socialStyles.svg}
-          onClick={() => openLink("https://www.twitter.com/amaancodes")}
-        />
-        <FontAwesomeIcon
-          icon={faLinkedinIn}
-          className={socialStyles.svg}
-          onClick={() => openLink("https://www.linkedin.com/in/amaan05")}
-        />
-        <FontAwesomeIcon
-          icon={faGithub}
-          className={socialStyles.svg}
-          onClick={() => openLink("https://www.github.com/amaan-ahmad")}
-        />
+        {socialData.map((i, index) => {
+          return (
+            <Link href={i.link} key={index}>
+              <FontAwesomeIcon icon={i.icon} className={socialStyles.svg} />
+            </Link>
+          );
+        })}
       </div>
     </>
   );

@@ -6,8 +6,7 @@ import navbar from "./navbar";
 import social from "./social";
 
 const name = "Amaan Ahmad";
-export const siteTitle =
-  "Amaan Ahmad | Web developer | UI/UX designer | Programmer";
+export const siteTitle = "Amaan Ahmad | Full Stack Web developer";
 
 export default function Layout({ children, home }) {
   return (
@@ -54,6 +53,7 @@ export default function Layout({ children, home }) {
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
             </h2>
+            {navbar()}
           </>
         )}
       </header>
