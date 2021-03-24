@@ -1,7 +1,7 @@
 ---
 title: "Foodable Contactless Dining - B2B SaaS product"
 date: "2020-09-01"
-thumbnail: "https://res.cloudinary.com/ucliq/image/upload/v1609596821/projects-img/foodable/Instagram_post_-_1_1_vhrfuv.png"
+thumbnail: "https://res.cloudinary.com/amaancodes/image/upload/v1609596821/projects-img/foodable/Instagram_post_-_1_1_vhrfuv.png"
 isFeatured: true
 ---
 
